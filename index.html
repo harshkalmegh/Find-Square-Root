@@ -1,0 +1,39 @@
+<script>
+  /**
+   * Algorithm
+   * 1. create a function to find square root which accepts one argument as number
+   * 2. handle all edgecases (return "Enter Proper Value")
+   * 3. create a for loop, loop untill given number
+   * 4. check for condition input is divisible by i two time and result is 1
+   * 4.1 if true then return the i
+   * 4.2 if false increment the loop
+   * 5. return number
+   */
+
+  var mySqrt = function (x) {
+    debugger;
+    const num = +x;
+    console.log(num);
+    if (!num || typeof num !== "number") {
+      return "Enter Proper Value";
+    }
+    if (num === 0) {
+      return 0;
+    }
+    if (num === 1) {
+      return 1;
+    }
+    let output;
+    for (let i = 2; i <= num; ) {
+      output = num / i / i;
+      console.log("output", output, i);
+      if (output <= 2) {
+        return i;
+      } else {
+        i++;
+      }
+    }
+    return output;
+  };
+  console.log(mySqrt(2));
+</script>
